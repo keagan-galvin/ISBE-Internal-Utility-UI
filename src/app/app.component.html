@@ -1,0 +1,46 @@
+<div fxLayout="column" class="appWrapper">
+  <mat-toolbar color="primary" fxLayout="row" id="titleBar">
+    <mat-toolbar-row>
+      <img src="../assets/logos/logo_whiteText_sm.png" alt="Illinois State Board of Education" class="logo" />
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="accentBar"></div>
+
+  <mat-sidenav-container fxFlex="<basis>">
+
+    <mat-sidenav class="sideNav" #sidenav mode="side" [(opened)]="opened" color="primary">
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let item of appMenu">
+          <button mat-button routerLink="{{ item.path }}">{{ item.title }}</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxLayout="column">
+      <div fxFlex="<basis>" fxLayout="column">
+        <mat-toolbar fxLayout="row" class="appNav">
+          <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()" style="margin-right: 10px;">
+              <mat-icon aria-label="menu">menu</mat-icon>
+            </button>
+            <span class="display-1">{{ activeRoute }}</span>
+            <div class="buttonBar">
+              <button mat-button *ngFor="let item of routeChildren" routerLink="{{ item.path }}">{{ item.title }}</button>
+            </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+        <div fxFlex="<basis>" id="routeOutlet">
+          <div class="basic-container">
+              <router-outlet></router-outlet>
+          </div>          
+        </div>        
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <div id="footer" fxLayout="row">
+    <span>&copy; {{ currentDate | date: 'yyyy' }} - Illinois State Board of Education </span>
+    <div fxFlex="<basis>"></div>
+    <span>{{ version }}</span>
+  </div>
+</div>

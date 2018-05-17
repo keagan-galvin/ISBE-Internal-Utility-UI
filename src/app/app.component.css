@@ -1,0 +1,8 @@
+.insetShadow {
+    -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.17); 
+    box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.17);
+}
+
+.appWrapper {
+    height:100%;
+}

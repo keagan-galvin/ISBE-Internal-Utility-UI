@@ -1,0 +1,79 @@
+@import "ISBE-Theme.css";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 100%;
+}
+.basicContainer {
+  padding: 30px;
+}
+.appWrapper {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.logo {
+  max-height: 85%;
+  display: block;
+}
+#titleBar {
+  z-index: 3;
+}
+.accentBar {
+  background-color: #19a2dc;
+  height: .4em;
+  z-index: 3;
+}
+.appNav {
+  background-color: #fff;
+  box-shadow: 0px -10px 17px 10px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 0px -10px 17px 10px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px -10px 17px 10px rgba(0, 0, 0, 0.58);
+  z-index: 2;
+}
+.appNav .buttonBar {
+  padding: 0 16px;
+}
+.appNav .buttonBar .mat-button {
+  text-transform: uppercase;
+}
+.sideNav {
+  min-width: 200px;
+  box-shadow: 0px 0 15px -2px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 0px 0 15px -2px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 0 15px -2px rgba(0, 0, 0, 0.58);
+}
+.sideNav .mat-list-item-content {
+  padding: 0 !important;
+}
+.sideNav .mat-list-item-content .mat-button {
+  width: 100%;
+  text-align: left;
+  border-radius: 0 !important;
+}
+#routeOutlet {
+  overflow: auto;
+}
+#footer {
+  background-color: #014f73;
+  color: #fff;
+  font-size: .75em;
+  white-space: nowrap;
+  z-index: 2;
+}
+#footer span {
+  display: block;
+  padding: 5px 16px;
+}
+.basic-container {
+  padding: 30px;
+}

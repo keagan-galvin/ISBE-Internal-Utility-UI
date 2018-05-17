@@ -1,0 +1,79 @@
+@import '../node_modules/@angular/material/_theming.scss';
+
+@include mat-core();
+
+$isbe-dark: (
+    50 : #e1e8eb,
+    100 : #b3c5ce,
+    200 : #809fad,
+    300 : #4d788c,
+    400 : #275b73,
+    500 : #013e5a,
+    600 : #013852,
+    700 : #013048,
+    800 : #01283f,
+    900 : #001b2e,
+    A100 : #67b0ff,
+    A200 : #3496ff,
+    A400 : #017cff,
+    A700 : #006fe6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$isbe-light: (
+    50 : #e3f4fb,
+    100 : #bae3f5,
+    200 : #8cd1ee,
+    300 : #5ebee7,
+    400 : #3cb0e1,
+    500 : #19a2dc,
+    600 : #169ad8,
+    700 : #1290d3,
+    800 : #0e86ce,
+    900 : #0875c5,
+    A100 : #eff7ff,
+    A200 : #bce0ff,
+    A400 : #89c8ff,
+    A700 : #6fbcff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// mandatory stuff for theming
+$isbe-primary: mat-palette($isbe-dark);
+$isbe-accent:  mat-palette($isbe-light);
+
+// include the custom theme components into a theme object
+$isbe-theme: mat-light-theme($isbe-primary, $isbe-accent);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($isbe-theme);
