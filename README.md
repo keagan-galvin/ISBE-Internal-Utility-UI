@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Ensure [NodeJS](https://nodejs.org/en/download/) is installed and available in your system path. Then run  `npm install --save` in the cloned projects root directory.
 
-## Development server
+## Development server 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
