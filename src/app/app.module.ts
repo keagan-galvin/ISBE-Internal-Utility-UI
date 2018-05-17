@@ -36,16 +36,12 @@ import {
   SampleComponent
 } from './components/sample/sample.component';
 import { SampleTwoComponent } from './components/sample-two/sample-two.component';
-import { BlkHrsComponent } from './components/blk-hrs/blk-hrs.component';
-import { WidgetComponent } from './components/blk-hrs/widget/widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
-    SampleTwoComponent,
-    BlkHrsComponent,
-    WidgetComponent
+    SampleTwoComponent
   ],
   imports: [
     BrowserModule,

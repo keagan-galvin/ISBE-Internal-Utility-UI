@@ -15,15 +15,15 @@
                     "options": {
                         "outputPath": "dist/ISBE-BoilerPlate",
                         "index": "src/index.html",
-                        "main": "src/main.ts",
-                        "polyfills": "src/polyfills.ts",
-                        "tsConfig": "src/tsconfig.app.json",
+                        "main": "src/typescript/main.ts",
+                        "polyfills": "src/typescript/polyfills.ts",
+                        "tsConfig": "src/typescript/tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "src/styles/styles.css"
                         ],
                         "scripts": []
                     },
@@ -67,12 +67,12 @@
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "main": "src/test.ts",
-                        "polyfills": "src/polyfills.ts",
-                        "tsConfig": "src/tsconfig.spec.json",
-                        "karmaConfig": "src/karma.conf.js",
+                        "main": "src/unit-testing/test.ts",
+                        "polyfills": "src/typescript/polyfills.ts",
+                        "tsConfig": "src/typescript/tsconfig.spec.json",
+                        "karmaConfig": "src/unit-testing/karma.conf.js",
                         "styles": [
-                            "styles.css"
+                            "src/styles/styles.css"
                         ],
                         "scripts": [],
                         "assets": [
@@ -85,8 +85,8 @@
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
                         "tsConfig": [
-                            "src/tsconfig.app.json",
-                            "src/tsconfig.spec.json"
+                            "src/typescript/tsconfig.app.json",
+                            "src/typescript/tsconfig.spec.json"
                         ],
                         "exclude": [
                             "**/node_modules/**"
