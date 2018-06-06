@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
   currentDate = new Date();
   version = 'Version 0.0.0';
   opened = true;
+  useAppMenu = false;
 
   appMenu: MenuItem[];
   activeRoute: String;
@@ -45,5 +46,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.appMenu = this.appNavService.getMenuItems();
+    this.useAppMenu = this.appMenu.length > 1;
+    this.opened = this.useAppMenu;
   }
 }
